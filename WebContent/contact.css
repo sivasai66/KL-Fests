@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+  /* background: #fff; */
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  z-index: 1000;
+}
+
+header .mynav *::selection {
+  background: #829399;
+  opacity: 2;
+}
+
+header .logo {
+  user-select: none;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+header .logo:hover img {
+  filter: brightness(10000%);
+}
+.mynav {
+  display: flex;
+}
+.mynav li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.mynav li a {
+  color: #fff;
+  /* color: #000; */
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.mynav li a:hover,
+.mynav li i:hover {
+  color: #de0611;
+}
+.mynav #account {
+  cursor: pointer;
+  position: relative;
+}
+
+.mynav #account .account-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  width: max-content;
+  left: -35px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+.mynav #account .account-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 7.5%;
+  transform: rotateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.mynav #account .account-dropdown.active {
+  display: block;
+}
+
+.mynav #account .account-dropdown .fa {
+  margin-right: 10px;
+}
+
+.mynav #account .account-dropdown li {
+  list-style: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: default;
+}
+.mynav #account .account-dropdown li:hover a,
+.mynav #account .account-dropdown li:hover span {
+  color: #de0611;
+}
+
+.mynav #account .account-dropdown li a,
+.mynav #account .account-dropdown li span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hide {
+  display: none;
+}
+.angle {
+  color: #fff;
+}
+.border {
+  color: #fff;
+  margin-right: 3px;
+}
+/*-----------------------------------------------------------------------------------*/

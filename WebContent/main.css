@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&family=Press+Start+2P&display=swap");
+
+@font-face {
+  font-family: abhi1;
+  src: url("./Fonts/Brightly\ Crush\ Shine.otf");
+}
+@font-face {
+  font-family: abhi2;
+  src: url("./Fonts/Drifttype.ttf");
+}
+@font-face {
+  font-family: abhi3;
+  src: url("./Fonts/Drifttype\ Solid.ttf");
+}
+@font-face {
+  font-family: abhi4;
+  src: url("./Fonts/Road_Rage.otf");
+}
+@font-face {
+  font-family: abhi5;
+  src: url("./Fonts/Sketch\ 3D.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+  /* background: #fff; */
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+/* -------------------------- Scroll Bar Section Starts -------------------------- 
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 3px;
+  z-index: 100;
+  background: linear-gradient(to top, #009aff, #00ffe7);
+  animation: scrolling 5s linear infinite;
+}
+
+@keyframes scrolling {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#progressbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #009aff, #00ffe7);
+  filter: blur(30px);
+}
+
+#progressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #009aff, #00ffe7);
+  filter: blur(30px);
+}
+
+ -------------------------- Header Bar Section Starts -------------------------- */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  z-index: 1000;
+}
+
+header .mynav *::selection {
+  background: #829399;
+  opacity: 2;
+}
+
+header .logo {
+  user-select: none;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+header .logo:hover img {
+  filter: brightness(10000%);
+}
+.mynav {
+  display: flex;
+}
+.mynav li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.mynav li a {
+  color: #fff;
+  /* color: #000; */
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.mynav li a:hover,
+.mynav li i:hover {
+  color: #de0611;
+}
+.mynav #account {
+  cursor: pointer;
+  position: relative;
+}
+
+.mynav #account .account-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  width: max-content;
+  left: -35px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+.mynav #account .account-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 7.5%;
+  transform: rotateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.mynav #account .account-dropdown.active {
+  display: block;
+}
+
+.mynav #account .account-dropdown .fa {
+  margin-right: 10px;
+}
+
+.mynav #account .account-dropdown li {
+  list-style: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: default;
+}
+.mynav #account .account-dropdown li:hover a,
+.mynav #account .account-dropdown li:hover span {
+  color: #de0611;
+}
+
+.mynav #account .account-dropdown li a,
+.mynav #account .account-dropdown li span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hide {
+  display: none;
+}
+.angle {
+  color: #fff;
+}
+.border {
+  color: #fff;
+  margin-right: 3px;
+}
+
+/* -------------------------- Search Bar Section Starts -------------------------- */
+
+.homepage {
+  position: relative;
+  top: 125px;
+  left: 0;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  z-index: 50;
+}
+
+.homepage .maincontent {
+  padding-top: 200px;
+  width: 100%;
+}
+
+.homepage .maincontent h1 {
+  color: #de0611;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.homepage .maincontent p span {
+  color: #ff8c00;
+  font-size: 20px;
+  font-weight: bold;
+  /* animation: title 1s ease-in linear; */
+}
+
+.homepage *::selection {
+  background: #829399;
+}
+
+.homepage .maincontent p {
+  margin-top: -10px;
+  color: #fff;
+  /* color: #000; */
+}
+
+/*.homepage .maincontent input datalist {
+  border: none !important;
+  padding-left: 10px;
+  outline: none;
+  width: 50%;
+  font-weight: bold;
+  height: 10%;
+  border-radius: 30px;
+  background-color: #a8a7a5;
+  padding-right: 5.3%;
+}*/
+
+.homepage .maincontent input {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+.homepage .maincontent form input[type="text"] {
+  border: none !important;
+  padding-left: 20px;
+  padding-right: 10px;
+  outline: none;
+  width: 50%;
+  font-weight: bold;
+  height: 35px;
+  border-radius: 30px 0 0 35px;
+  background-color: #a8a7a5;
+  
+}
+
+.homepage .maincontent form input[type="text"]:focus::placeholder {
+  color: #262625;
+  font-weight: bold;
+}
+
+.homepage .maincontent form input[type="submit"] {
+	position: relative;
+	left: -5px;
+	width: 100px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	background-color: #829399;
+	text-align: center;
+	font-weight: bold;
+	height: 35px;
+	border-radius: 0 30px 35px 0;
+}
+
+.homepage .maincontent form input[type="submit"]:hover {
+	background-color: #654321;
+	color: #fff;
+}
+
+input[list]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.homepage .maincontent .scroll-down {
+  text-align: center;
+  color: #fff;
+  /* color: #000; */
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+}
+.homepage .maincontent .scroll-down i {
+  font-size: medium;
+  animation: animate 1s ease infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(0px);
+    transform: scale(1.1);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.homepage .maincontent .scroll-down h5 {
+  text-align: center;
+}
+
+/* -------------------------------- Fest Details Start -------------------------------- */
+
+.fests {
+  position: absolute;
+  margin-top: 10rem;
+  color: #fff;
+  /* color: #000; */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.fests h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.fests .fests-boxes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fests .fests-boxes a {
+  margin: 2%;
+}
+
+.fests .fests-boxes .fest-box {
+  border: 1px solid #000;
+  width: 400px;
+  background-color: #262625;
+  padding: 2px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.fests .fests-boxes .fest-box h2 {
+  text-transform: uppercase;
+}
+
+.fests .fests-boxes .fest-box:hover {
+  opacity: 1;
+  /* box-shadow: 1px 10px 25px #b6bab7; */
+  box-shadow: 0px 0px 25px #de0611;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.fests .fest-box img {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 2px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  /* border: 2px solid rgba(0, 0, 0, 0.1); */
+}
+
+a,
+.fests .fest-box .fest-details {
+  text-decoration: none;
+  color: #fff;
+  /* color: #000; */
+}
+
+.fests .fest-box .fest-double-box {
+  border: 2px solid #262625;
+  padding: 1px;
+  text-align: center;
+}
+
+.footer {
+  position: relative;
+  color: #fff;
+  /* color: #000; */
+  margin-top: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 25;
+}
+
+.footer h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.scroll-up {
+  position: absolute;
+  text-align: center;
+  bottom: 30px;
+  right: 30px;
+  line-height: 1.3em;
+  z-index: 85;
+}
+
+.scroll-up i {
+  text-align: end;
+  cursor: pointer;
+  font-size: 40px;
+  animation: animate-down 1s infinite;
+}
+
+.scroll-up i:hover {
+  color: #829399;
+}
+
+@keyframes animate-down {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-up p {
+  font-size: 14px;
+}

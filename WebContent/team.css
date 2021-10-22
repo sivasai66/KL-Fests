@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+  /* background: #fff; */
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  z-index: 1000;
+}
+
+header .mynav *::selection {
+  background: #829399;
+  opacity: 2;
+}
+
+header .logo {
+  user-select: none;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+header .logo:hover img {
+  filter: brightness(10000%);
+}
+.mynav {
+  display: flex;
+}
+.mynav li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.mynav li a {
+  color: #fff;
+  /* color: #000; */
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.mynav li a:hover,
+.mynav li i:hover {
+  color: #de0611;
+}
+.mynav #account {
+  cursor: pointer;
+  position: relative;
+}
+
+.mynav #account .account-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  width: max-content;
+  left: -35px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+.mynav #account .account-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 7.5%;
+  transform: rotateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.mynav #account .account-dropdown.active {
+  display: block;
+}
+
+.mynav #account .account-dropdown .fa {
+  margin-right: 10px;
+}
+
+.mynav #account .account-dropdown li {
+  list-style: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: default;
+}
+.mynav #account .account-dropdown li:hover a,
+.mynav #account .account-dropdown li:hover span {
+  color: #de0611;
+}
+
+.mynav #account .account-dropdown li a,
+.mynav #account .account-dropdown li span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hide {
+  display: none;
+}
+.angle {
+  color: #fff;
+}
+.border {
+  color: #fff;
+  margin-right: 3px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.body {
+  margin-top: 8%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: fit-content;
+}
+
+.team-details {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  background: #000;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  margin: 20px;
+  background-image: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.container .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.container .card .content .imgBx {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+.container .card .content .imgBx img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.container .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+
+.container .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .card .sci li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  padding-top: 2%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
